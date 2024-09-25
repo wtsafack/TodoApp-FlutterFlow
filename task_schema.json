@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task",
+  "description": "Schema for task documents in Firestore",
+  "type": "object",
+  "properties": {
+    "completed": {
+      "description": "Status of the task completion",
+      "type": "boolean",
+      "example": false
+    },
+    "created": {
+      "description": "The time when the task was created",
+      "type": "string",
+      "format": "date-time",
+      "example": "2024-09-25T18:29:46-04:00"
+    },
+    "details": {
+      "description": "The details of the task",
+      "type": "string",
+      "example": "Study using Ai and the internet, along with Zybook/videos"
+    },
+    "title": {
+      "description": "The title of the task",
+      "type": "string",
+      "example": "Studying for CSC 305 Quiz 3"
+    },
+    "user": {
+      "description": "Reference to the user who created the task",
+      "type": "string",
+      "example": "/users/iH23SQ80nxNTX01MEoMK8rFttV62"
+    }
+  },
+  "required": ["completed", "created", "title", "user"]
+}
